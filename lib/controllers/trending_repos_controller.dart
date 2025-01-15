@@ -10,7 +10,6 @@ class GithubController extends GetxController {
 
   final NetworkService _networkService = NetworkService();
 
-  // Fetch trending repositories
   Future<void> fetchRepos() async {
     isLoading.value = true;
     isError.value = false;

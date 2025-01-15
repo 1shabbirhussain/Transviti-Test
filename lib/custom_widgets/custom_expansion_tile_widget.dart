@@ -10,24 +10,18 @@ class CustomExpansionTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExpansionTile(
       shape: const RoundedRectangleBorder(
-        side: BorderSide(color: Colors.transparent), // Removes the border
+        side: BorderSide(color: Colors.transparent),
         borderRadius: BorderRadius.zero,
       ),
       leading: CircleAvatar(
         backgroundImage: NetworkImage(repo.ownerAvatar),
       ),
-      title: Text(
-        repo.ownerName,
-        style: const TextStyle(
-          fontSize: 14, 
-          fontWeight: FontWeight.normal,
-        ),
-      ),
+      title: subTitleTextWidget(text: repo.ownerName),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            repo.repoName, 
+            repo.repoName,
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
@@ -39,26 +33,20 @@ class CustomExpansionTile extends StatelessWidget {
       expandedAlignment: Alignment.topLeft,
       trailing: const SizedBox.shrink(),
       children: [
-        Text(
-          repo.description.isNotEmpty
+        subTitleTextWidget(
+          text: repo.description.isNotEmpty
               ? repo.description
               : 'No description available.',
-          style: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.normal,
-          ),
         ),
         const SizedBox(height: 8),
         Row(
           children: [
-            const Icon(Icons.star, size: 16, color: Colors.amber),
-            const SizedBox(width: 4),
-            Text(
-              repo.stars.toString(),
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.normal,
-              ),
+            Row(
+              children: [
+                const Icon(Icons.star, size: 16, color: Colors.amber),
+                const SizedBox(width: 4),
+                subTitleTextWidget(text: repo.stars.toString()),
+              ],
             ),
             const SizedBox(width: 16),
             if (repo.language.isNotEmpty)
@@ -66,18 +54,22 @@ class CustomExpansionTile extends StatelessWidget {
                 children: [
                   const Icon(Icons.code, size: 16),
                   const SizedBox(width: 4),
-                  Text(
-                    repo.language,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
+                  subTitleTextWidget(text: repo.language),
                 ],
               ),
           ],
         ),
       ],
+    );
+  }
+
+  Text subTitleTextWidget({required String text}) {
+    return Text(
+      text,
+      style: const TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.normal,
+      ),
     );
   }
 }

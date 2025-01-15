@@ -25,7 +25,7 @@ class GithubRepo {
       id: json['id'] as int? ?? 0,
       repoName: json['name'] as String? ?? '',
       description: json['description'] as String? ?? '',
-      ownerName: json['owner']?['login'] as String? ?? '', // Changed from ownerName
+      ownerName: json['owner']?['login'] as String? ?? '', 
       ownerAvatar: json['owner']?['avatar_url'] as String? ?? '',
       htmlUrl: json['html_url'] as String? ?? '',
       stars: json['stargazers_count'] as int? ?? 0,
