@@ -1,6 +1,6 @@
 import 'dart:developer';
 import 'package:get/get.dart';
-import 'package:transvity/models/home_model.dart';
+import 'package:transvity/models/trending_repos_model.dart';
 import 'package:transvity/services/network_service.dart';
 
 class GithubController extends GetxController {

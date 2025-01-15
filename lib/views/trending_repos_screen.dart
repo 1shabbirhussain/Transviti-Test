@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:transvity/controllers/home_controller.dart';
+import 'package:transvity/controllers/trending_repos_controller.dart';
 import 'package:transvity/custom_widgets/custom_expansion_tile_widget.dart';
 
-class HomeScreen extends StatelessWidget {
+class TrendingReposScreen extends StatelessWidget {
   final GithubController controller = Get.put(GithubController());
 
-  HomeScreen({super.key}) {
+  TrendingReposScreen({super.key}) {
     controller.fetchRepos();
   }
 

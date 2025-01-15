@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:transvity/models/home_model.dart';
+import 'package:transvity/models/trending_repos_model.dart';
 
 class CustomExpansionTile extends StatelessWidget {
   final GithubRepo repo;
