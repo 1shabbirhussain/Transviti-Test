@@ -57,6 +57,10 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+/pubspec.lock
+/.dart_tool/
+/.idea/
+/.vscode/
 
 # Symbolication related
 app.*.symbols
