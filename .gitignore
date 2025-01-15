@@ -4,7 +4,7 @@
 .dart_tool/
 .packages
 build/
-# If you're building an application, you may want to check-in your pubspec.lock
+# If you're building an application, you may want to check in your pubspec.lock
 pubspec.lock
 
 # Directory created by dartdoc
@@ -23,8 +23,10 @@ doc/api/
 *.js.deps
 *.js.map
 
+# Flutter plugin dependencies
 .flutter-plugins
 .flutter-plugins-dependencies
+
 # Miscellaneous
 *.class
 *.log
@@ -43,10 +45,8 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VS Code settings
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -58,9 +58,6 @@ migrate_working_dir/
 .pub/
 /build/
 /pubspec.lock
-/.dart_tool/
-/.idea/
-/.vscode/
 
 # Symbolication related
 app.*.symbols
@@ -68,7 +65,7 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# Android Studio build artifacts
 /android/app/debug
 /android/app/profile
 /android/app/release
